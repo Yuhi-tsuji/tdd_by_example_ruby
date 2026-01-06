@@ -1,0 +1,10 @@
+# .gitignore
+/.bundle/
+/vendor/bundle/
+/coverage/
+
+# RSpec generated files
+.rspec_status
+
+# System files
+.DS_Store
