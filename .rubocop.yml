@@ -1,0 +1,57 @@
+# .rubocop.yml
+
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false # "rubocop-railsは使用しない
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'Gemfile'
+
+# --- 基本設定 ---
+
+# ドキュメントコメント(class Fooの上にある説明)を必須にしない
+# 練習用のコードでこれを書くのは手間なので無効化
+Style/Documentation:
+  Enabled: false
+
+# 日本語のコメントを許可
+Style/AsciiComments:
+  Enabled: false
+
+# 文字列リテラルの凍結 (Ruby 3.0以降のベストプラクティスとして有効化推奨)
+# ファイルの先頭に # frozen_string_literal: true を自動挿入してくれます
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+# --- メトリクス（複雑度・行数）の緩和 ---
+
+# メソッドの行数。TDDの初期段階では少し長くてもOKにする
+Metrics/MethodLength:
+  Max: 20
+
+# クラスの行数。練習用の1ファイルなら100行を超えることもあるので緩和
+Metrics/ClassLength:
+  Max: 150
+
+# --- RSpec 特有の設定 ---
+
+# RSpecの describe / context はどうしてもネストして長くなるので
+# ブロックの長さチェックから spec フォルダを除外する
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+# 1つの it ブロック内での expect の数
+# TDDの原則は「1テスト1アサーション」ですが、
+# 練習中はまとめてチェックしたいこともあるので 3つまで許容
+RSpec/MultipleExpectations:
+  Max: 3
+
+# describe "..." の文字列の長さを気にしない
+RSpec/ExampleLength:
+  Max: 15
