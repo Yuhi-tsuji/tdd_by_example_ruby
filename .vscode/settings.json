@@ -1,0 +1,16 @@
+{
+  // このプロジェクトでは Ruby LSP をフォーマッターとして使う
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  // Ruby LSP が裏側で使うフォーマッターとして RuboCop を指定
+  "rubyLsp.formatter": "rubocop",
+
+  // 検索から除外するファイル
+  "search.exclude": {
+    "**/vendor": true,
+    "**/.bundle": true
+  }
+}
