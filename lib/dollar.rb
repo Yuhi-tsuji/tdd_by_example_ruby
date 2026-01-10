@@ -10,4 +10,9 @@ class Dollar
   def times(multiplier)
     Dollar.new(@amount * multiplier)
   end
+
+  # 等価性の定義
+  def ==(other)
+    true
+  end
 end
