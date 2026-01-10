@@ -18,5 +18,8 @@ RSpec.describe 'Dollar' do
   it 'equality' do
     # $5 と $5 は等しい（True）
     expect(Dollar.new(5)).to eq Dollar.new(5)
+
+    # 2つ目のテスト：$5 と $6 は等しくない
+    expect(Dollar.new(5)).not_to eq Dollar.new(6)
   end
 end
