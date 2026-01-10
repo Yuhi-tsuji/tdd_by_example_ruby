@@ -14,4 +14,9 @@ RSpec.describe 'Dollar' do
     product = five.times(3)
     expect(product.amount).to eq 15
   end
+
+  it 'equality' do
+    # $5 と $5 は等しい（True）
+    expect(Dollar.new(5)).to eq Dollar.new(5)
+  end
 end
