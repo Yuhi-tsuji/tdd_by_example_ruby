@@ -13,6 +13,6 @@ class Dollar
 
   # 等価性の定義
   def ==(other)
-    true
+    self.amount == other.amount
   end
 end
