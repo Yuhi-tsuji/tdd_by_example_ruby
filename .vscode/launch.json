@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "rdbg",
+            "name": "Debug RSpec - current file",
+            "request": "launch",
+            "command": "rspec",
+            "script": "${file}",
+            "args": [],
+            "askParameters": false
+        },
+        {
+            "type": "rdbg",
+            "name": "Debug RSpec - all",
+            "request": "launch",
+            "command": "rspec",
+            "script": "spec",
+            "args": [],
+            "askParameters": false
+        }
+    ]
+}

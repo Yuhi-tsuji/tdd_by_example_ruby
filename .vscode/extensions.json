@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "Shopify.ruby-lsp",
+        "KoichiSasada.vscode-rdbg",
+        "eamodio.gitlens",
+        "castwide.solargraph",
+        "streetsidesoftware.code-spell-checker",
+        "KaiqueDallau.vscode-ruby-endwise"
+    ]
+}
