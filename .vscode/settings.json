@@ -3,11 +3,27 @@
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.semanticHighlighting.enabled": true
   },
   // Ruby LSP が裏側で使うフォーマッターとして RuboCop を指定
   "rubyLsp.formatter": "rubocop",
-
+  // --- TDD/Ruby向けの全般的な追加設定 ---
+  // 保存時に行末のスペースを自動削除（RuboCop対策）
+  "files.trimTrailingWhitespace": true,
+  // 保存時にファイルの最後に空行を自動追加（RuboCop対策）
+  "files.insertFinalNewline": true,
+  // 120文字の目安ラインを表示（横に長くなりすぎるのを防ぐ）
+  "editor.rulers": [
+    120
+  ],
+  // カッコのペアを色分けして視認性を高める
+  "editor.bracketPairColorization.enabled": true,
+  // --- 拡張機能の設定 ---
+  // Solargraph を補完などで使用する場合
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": false, // フォーマットは Ruby LSP に任せる
   // 検索から除外するファイル
   "search.exclude": {
     "**/vendor": true,
